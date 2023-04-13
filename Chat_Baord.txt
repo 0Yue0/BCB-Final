@@ -1,0 +1,14 @@
+For: 
+
+1. Efficient info sharing
+2. Any infö you want to share with group members. 
+3. Updatas you have made
+4. Next steps for other groupmembers
+
+
+04/12/2023
+Yue
+Found my previous R code for heatmap. But it was too old that I need time to fix it for current use. 
+
+
+	
