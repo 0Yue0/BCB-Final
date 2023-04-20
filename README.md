@@ -9,14 +9,14 @@ Summary file titled: KinneyKempLiu-2023.md
 
 &nbsp;
 
-    Contains paper summary, coding workflow, results
+   Contains paper summary, coding workflow, results
 
 
 Coding Directory titled:
 
 &nbsp;
 
-    Contains:
+   Contains:
       slurm scripts
       
 
