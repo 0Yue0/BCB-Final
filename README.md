@@ -1,7 +1,6 @@
 # Final Project README
 
-***Contents***
-
+## Contents
 
 &nbsp;
 
