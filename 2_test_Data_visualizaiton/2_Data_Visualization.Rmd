@@ -1,0 +1,8 @@
+---
+title: "based on given data"
+author: "Shelly Kinney, Joshua Kemp, Yue Liu"
+date: "2023-04-20"
+output: html_document
+---
+
+
