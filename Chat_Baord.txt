@@ -15,7 +15,8 @@ Shelly
 
 Just leaving the list for the requirements for submission of our repository:
     1 A top README.md file that describes the contents of your directory.
-    2 An author(s)-YEAR.md file that introduces the original paper, explains the technical details of your replication of analyses and summarizes your replication of the original results.
+    2 An author(s)-YEAR.md file that introduces the original paper, explains the technical details of your replication 
+    of analyses and summarizes your replication of the original results.
     3 A code directory that contains the commented code for the replication.
     4 A data directory that contains links to data necessary to run your code.
 
