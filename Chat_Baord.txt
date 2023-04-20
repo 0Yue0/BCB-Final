@@ -10,5 +10,13 @@ For:
 Yue
 Found my previous R code for heatmap. But it was too old that I need time to fix it for current use. 
 
+04/20/2023
+Shelly
 
-	
+Just leaving the list for the requirements for submission of our repository:
+    1 A top README.md file that describes the contents of your directory.
+    2 An author(s)-YEAR.md file that introduces the original paper, explains the technical details of your replication of analyses and summarizes your replication of the original results.
+    3 A code directory that contains the commented code for the replication.
+    4 A data directory that contains links to data necessary to run your code.
+
+I will work on updating the README and creating the author file, then it will just be moving files around into a code or data directory
