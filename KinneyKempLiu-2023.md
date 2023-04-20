@@ -20,11 +20,11 @@ slurm script:
 
 Download the data
 
-Trim data
+Trim the data
 
-Index genome
+Index the genome
 
-Map reads to genome
+Map reads to the genome
 
 
 &nbsp;  
