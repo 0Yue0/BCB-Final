@@ -15,10 +15,15 @@ Goal of project: Recreate Additionalfile1:S2; Figure 5A; Figure 3C ?; Figure 3D 
 
 &nbsp;  
 ***Workflow Details***
+
 slurm script: 
+
 Download the data
+
 Trim data
+
 Index genome
+
 Map reads to genome
 
 
