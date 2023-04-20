@@ -20,3 +20,5 @@ Just leaving the list for the requirements for submission of our repository:
     4 A data directory that contains links to data necessary to run your code.
 
 I will work on updating the README and creating the author file, then it will just be moving files around into a code or data directory
+++
+Goal of project: Recreate Additionalfile1:S2; Figure 5A; Figure 3C ?; Figure 3D ?; Additionalfile1:S4; Additionalfile1:S6; Additionalfile1:S9
