@@ -7,7 +7,9 @@ Paper link: https://link.springer.com/article/10.1186/s13059-020-02094-0
 &nbsp;  
 
 ***Paper Overview***
+
 Authors: Qingxin Song, Atsumi Ando, Ning Jiang, Yoko Ikeda, & Z. Jeffrey Chen
+
 Polyploidy and transcriptome changes
 
 &nbsp;
