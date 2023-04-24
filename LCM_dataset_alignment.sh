@@ -168,9 +168,7 @@ echo "genome=*GCF_*.fna" >> index_genome.batch
 echo "annotation=*GCF_*.gtf" >> index_genome.batch
 echo "hisat2_extract_splice_sites.py \${annotation} > genome_splice_sites" >> index_genome.batch
 echo "hisat2_extract_exons.py \${annotation} > genome_exons" >> index_genome.batch # extract exons from gtf file so hisat may add them to the index and use them to inform the alignment
-echo "hisat2-build  --exon genome_exons --ss genome._splice_sites \$genome \$genome" >> index_genome.batch #extract splice sites from gtf file so hisat may add them to the index and use them to inform the alignment
-echo "wait" >> index_genome.batch
-echo "done" >> index_genome.batch
+echo "hisat2-build  --exon genome_exons --ss genome_splice_sites \$genome \$genome" >> index_genome.batch #extract splice sites from gtf file so hisat may add them to the index and use them to inform the alignment
 
 ## create n files dividing up the accesions into managagable chunks for each slurm batch
 split -n l/${splitn} ../$acclist piece_acc_
