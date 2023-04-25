@@ -10,7 +10,7 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
    Contains paper summary, coding workflow, results
 
 
-**Coding Directory titled:**
+**Coding Directory titled:** Code
 &nbsp;
 
    Contains:
@@ -18,7 +18,20 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
       
 
 
-**Data Directory titled:**
+**Data Directory titled:** Data
+&nbsp;
+   Contains:
+   
+      LCM_SRA_ACC_list
+      
+      LCM_SRA-meta
+      
+      ref_64_expression_data
+      
+      SRR_Acc_list
+      
+      
+      
 
 **Original Paper Directory titled:**
 
