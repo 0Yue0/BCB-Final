@@ -6,7 +6,7 @@ For:
 4. Next steps for other groupmembers
 
 
-04/12/2023
+04/12/2023 - done
 Yue
 Found my previous R code for heatmap. But it was too old that I need time to fix it for current use. 
 
