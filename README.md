@@ -1,6 +1,6 @@
 # Final Project README
 
-Group Members: Shelly Kinney, Joshua M. Kemp, Yue Liu
+Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 
 ## Contents
 
