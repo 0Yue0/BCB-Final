@@ -1,4 +1,4 @@
-Group members: Shelly Kinney, Joshua M Kemp, Yue Liu
+Group members: Joshua M Kemp, Shelly Kinney, Yue Liu
 
 &nbsp;  
 
