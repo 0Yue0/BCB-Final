@@ -1,8 +1,0 @@
----
-title: "BCB 546 Final Project 2023"
-author: "Shelly Kinney, Joshua Kemp, Yue Liu"
-date: "2023-04-20"
-output: html_document
----
-
-
