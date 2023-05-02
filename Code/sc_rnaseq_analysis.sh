@@ -214,5 +214,4 @@ genomeindex_jobid=$(sbatch --parsable index_genome.batch)
 for Chunk in piece_acc_*
     do
     rna_align_jobid=$(sbatch --dependency=afterok:$genomeindex_jobid --parsable download_trim_and_map${Chunk}.batch)
-   # sbatch --dependency=afterok:$rna_align_jobid --parsable readcount_${Chunk}.batch
 done
