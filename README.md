@@ -20,7 +20,7 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
    Contains:
    
    
-   slurm scripts
+   bash scripts
    
    R scripts
    
