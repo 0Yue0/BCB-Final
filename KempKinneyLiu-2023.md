@@ -111,4 +111,9 @@ Total
 &nbsp;  
 ***Results***
 
+Read count differences; our filtering not as strict as the paper's filtering steps.
+
+Venn diagrams show differences, but overall general trends appear similar.
+
+
 
