@@ -26,6 +26,7 @@ library(dplyr)
 library(rmarkdown)
 library(stats)
 library(knitr)
+library(readxl)
 
 ```
 
@@ -41,4 +42,96 @@ colnames(merged_files) <- c("Merge_Col", file_names)
 
 ```
 
+
+
+```{r}
+ref64 <- read_csv("https://github.com/0Yue0/BCB546_Spring2023_Final/blob/2fe63179205b2ec02f1cd8742c074b23eeca1c0f/Data/ref-54-expression.csv")
+```
+
+
+# Figure S4
+```{r}
+# data processing
+
+fs4_gene1 <- c ("AT4G39340","AT5G64720","AT2G21740","AT1G76750","AT2G21750","AT1G74480")
+
+fs4_gene2 <- c("AT1G26795","AT1G60985","AT2G02515","AT2G20595","AT2G35670","AT3G04540",
+               "AT3G10890","AT3G24510","AT4G25530","AT5G04560","AT5G27880","AT5G38330")
+
+fs4_data1 <- merged_files %>% 
+  filter(Merge_Col %in% fs4_gene1) %>%
+  mutate(cell_type = "Egg_cell")
+
+fs4_data2 <- merged_files %>% 
+  filter(Merge_Col %in% fs4_gene2) %>%
+  mutate(cell_type = "Central_cell")
+
+fs4_data <- full_join(fs4_data1,fs4_data2)
+  
+fs4_list <-  c ("AT4G39340","AT5G64720","AT2G21740","AT1G76750","AT2G21750","AT1G74480",
+                "AT1G26795","AT1G60985","AT2G02515","AT2G20595","AT2G35670","AT3G04540",
+               "AT3G10890","AT3G24510","AT4G25530","AT5G04560","AT5G27880","AT5G38330")
+fs4_once <- merged_files %>%
+  filter(Merge_Col %in% fs4_list)
+```
+
+```{r}
+library(pheatmap)
+library(tidyverse)
+#install.packages("hrbrthemes")
+library(hrbrthemes)
+library(viridis)
+#install.packages("plotly")
+library(plotly)
+#install.packages("plotl")
+#install.packages("d3heatmap")
+#install.packages("png")
+library("png")
+#install.packages("d3heatmap_0.6.1.2.tar.gz", repso=NULL, type="source")
+library(d3heatmap)
+#install.packages("heatmaply")
+library(heatmaply)
+```
+
+
+
+```{r}
+class(fs4_data)
+fs4_data_0 <- fs4_data[,1:47]
+
+# Matrix format
+rownames(fs4_data_0) <- fs4_data_0[,1]
+fs4_p <- fs4_data_0%>% dplyr::select(-Merge_Col)
+fs4_p <- as.matrix(fs4_p)
+
+heatmaply(fs4_p,
+          dendrogram = "none",
+          )
+
+pheatmap_fs4 <- fs4_p
+pheatmap_fs4[pheatmap_fs4 == 0] <- NA
+pheatmap(pheatmap_fs4)
+```
+
+
+```{r}
+library(heatmaply)
+p <- heatmaply(fs4_p, 
+        dendrogram = "none",
+        xlab = "", ylab = "", 
+        main = "",
+        scale = "column",
+        margins = c(60,100,40,20),
+        grid_color = "white",
+        grid_width = 0.00001,
+        titleX = FALSE,
+        hide_colorbar = TRUE,
+        branches_lwd = 0.1,
+        label_names = c("Country", "Feature:", "Value"),
+        fontsize_row = 5, fontsize_col = 5,
+        labCol = colnames(mat),
+        labRow = rownames(mat),
+        heatmap_layers = theme(axis.line=element_blank())
+        )
+```
 
