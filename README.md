@@ -20,6 +20,14 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
    Contains:
    
    
+   Spack_Modules_used
+   
+   d3heatmap_0.6.1.2.tar.gz
+   
+   rename_output.bash
+   
+   sc_rnaseq_analysis.sh
+   
    LCM_dataset_alignment.sh
    
    Data_visualization_heatmap.Rmd
@@ -38,6 +46,8 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 &nbsp;
 
    Contains:
+   
+   sc_rna_seq_metadata.txt
    
    LCM_SRA_ACC_list.txt
       
