@@ -34,13 +34,15 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 
    Contains:
    
-   LCM_SRA_ACC_list
+   LCM_SRA_ACC_list.txt
       
-   LCM_SRA-meta
+   LCM_SRA-meta.txt
       
    ref_64_expression_data
       
-   SRR_Acc_list
+   SRR_Acc_list.txt
+   
+   ref-54-expression.csv
       
       
 &nbsp;
