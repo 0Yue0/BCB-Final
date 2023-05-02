@@ -8,7 +8,7 @@ library(RColorBrewer)
 
 
 #run code from "R_script_to_merge_readcount_files" before running this code
-total <- read_tsv("merged_files")
+total <- read_tsv("merged_files.txt")
 
 
 #separate out cell types; CC is central cell, EC is egg cell, SC is synergid cell
