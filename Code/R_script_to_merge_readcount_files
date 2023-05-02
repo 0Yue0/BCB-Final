@@ -1,3 +1,10 @@
+#Notes about Star_output:
+#column 1: gene ID
+#column 2: counts for unstranded RNA-seq
+#column 3: counts for the 1st read strand aligned with RNA (htseq-count option -s yes)
+#column 4: counts for the 2nd read strand aligned with RNA (htseq-count option -s reverse)
+
+
 
 ##Run these in the terminal to copy the necessary files and create a file with the list of names
 git clone https://github.com/0Yue0/BCB546_Spring2023_Final.git
