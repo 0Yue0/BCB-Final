@@ -14,15 +14,19 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 &nbsp;
 
    Contains:
-      slurm scripts
-      R scripts
-      file with code for file combination
+   
+   slurm scripts
+   
+   R scripts
+   
+   file with code for file combination
       
 
 
 **Data Directory titled:** Data
 
 &nbsp;
+
    Contains:
    
    LCM_SRA_ACC_list
@@ -39,10 +43,11 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 **Original Paper Directory titled:** OG_Paper
 
 &nbsp;
-Contains: 
 
-Original paper file
+   Contains: 
 
-Supplementary data from original file
+   Original paper file
+
+   Supplementary data from original file
 
 
