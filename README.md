@@ -20,11 +20,16 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
    Contains:
    
    
-   bash scripts
+   LCM_dataset_alignment.sh
    
-   R scripts
+   Data_visualization_heatmap.Rmd
    
-   file with code for file combination
+   R_for_Venn.R
+   
+   Download_existing_LCM(ref64)expression_dataset_and_import_to_R
+   
+   R_script_to_merge_readcount_files
+   
       
 &nbsp;
 
@@ -53,8 +58,18 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 
    Contains: 
 
-   Original paper file
+   Paper.pdf
 
-   Supplementary data from original file
+   SupplementaryData/
+      
+      AF2_Expression_of_each_gene_in_each_cell.xlsx
+      
+      AF3_DEG_p0.05_1wayANOVA.xlsx
+      
+      AF4_expression_of_CRPgene.xlsx
+      
+      AF5_primers.xlsx
+      
+      Supplementary_figures.pdf
 
 
