@@ -15,6 +15,8 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 
    Contains:
       slurm scripts
+      R scripts
+      file with code for file combination
       
 
 
@@ -34,6 +36,11 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
       
       
 
-**Original Paper Directory titled:**
+**Original Paper Directory titled:** OG_Paper
+
+&nbsp;
+Contains: 
+Original paper file
+Supplementary data from original file
 
 
