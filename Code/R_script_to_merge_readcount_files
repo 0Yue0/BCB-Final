@@ -27,3 +27,10 @@ files <- lapply(file_names, function(x) read.table(x, header = FALSE)) # load in
 reduced_files <- lapply(files, function(x) x[,1:2])
 merged_files <- suppressWarnings(Reduce(function(x, y) merge(x, y, by = "V1"), reduced_files)) # merge the files by the first column
 colnames(merged_files) <- c("Merge_Col", file_names)
+
+#the following pieces of code will remove the ERCC spike in controls from the actual expression data
+
+spikin_values.df <- merged_files[grep("^ERCC*", merged_files$Merge_Col),]
+gene_values.df <- merged_files[grep("^ERCC*", merged_files$Merge_Col, invert=TRUE),]
+
+
