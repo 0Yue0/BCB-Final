@@ -1,0 +1,44 @@
+---
+title: "Visualization"
+author: "Shelly Kinney, Joshua Kemp, Yue Liu"
+date: "2023-05-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Run these in the terminal to copy the necessary files and create a file with the list of names
+```{r}
+git clone https://github.com/0Yue0/BCB546_Spring2023_Final.git
+cp ./BCB546_Spring2023_Final/readcounts/* .
+ls *readcounts.tab > filenames.txt
+```
+
+
+
+#start of R scripting
+```{r}
+library(tidyverse)
+library(dplyr)
+library(rmarkdown)
+library(stats)
+library(knitr)
+
+```
+
+
+# merge all readcount data into one dataframe
+```{r}
+list.files <- scan("filenames.txt", what="", sep="\n")
+file_names <- list.files(pattern = "\\.tab") #create an r list with the files names from the txt file
+files <- lapply(file_names, function(x) read.table(x, header = FALSE)) # load in files
+reduced_files <- lapply(files, function(x) x[,1:2])
+merged_files <- suppressWarnings(Reduce(function(x, y) merge(x, y, by = "V1"), reduced_files)) # merge the files by the first column
+colnames(merged_files) <- c("Merge_Col", file_names)
+
+```
+
+
