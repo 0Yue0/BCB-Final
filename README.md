@@ -59,17 +59,15 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
    Contains: 
 
    Paper.pdf
-
-   SupplementaryData/
       
-   AF2_Expression_of_each_gene_in_each_cell.xlsx
+   SupplementaryData/AF2_Expression_of_each_gene_in_each_cell.xlsx
       
-   AF3_DEG_p0.05_1wayANOVA.xlsx
+   SupplementaryData/AF3_DEG_p0.05_1wayANOVA.xlsx
       
-   AF4_expression_of_CRPgene.xlsx
+   SupplementaryData/AF4_expression_of_CRPgene.xlsx
       
-   AF5_primers.xlsx
+   SupplementaryData/AF5_primers.xlsx
       
-   Supplementary_figures.pdf
+   SupplementaryData/Supplementary_figures.pdf
 
 
