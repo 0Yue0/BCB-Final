@@ -1,0 +1,8 @@
+##mac run in terminal (windows will have a different installer for wget and gnumeric) these might already be available on hpc
+brew install wget
+brew install gnumeric
+wget https://ars.els-cdn.com/content/image/1-s2.0-S0960982210001405-mmc2.xls
+ssconvert -S 1-s2.0-S0960982210001405-mmc2.xls LCM_hybridization_expression.csv
+
+##Run to import the important sheet to a dataframe
+REF_64_expression.df <- read_csv("LCM_hybridization_expression.csv.2", col_names = FALSE)
