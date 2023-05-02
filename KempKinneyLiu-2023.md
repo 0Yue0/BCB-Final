@@ -16,10 +16,14 @@ Polyploidy and transcriptome changes
 
 &nbsp;
 
-Goal of project: Recreate Additionalfile1:S2; Figure 5A; Figure 3C ?; Figure 3D ?; Additionalfile1:S4; Additionalfile1:S6; Additionalfile1:S9
+Goal of project: Recreate Fig 5 Venn Diagram
 
 &nbsp;  
 ***Workflow Details***
+
+Note: specific program details are listed within the code
+
+&nbsp;
 
 bash script: LCM_dataset_alignment.sh
 
@@ -106,5 +110,10 @@ Total
 
 &nbsp;  
 ***Results***
+
+Read count differences; our filtering not as strict as the paper's filtering steps.
+
+Venn diagrams show differences, but overall general trends appear similar.
+
 
 
