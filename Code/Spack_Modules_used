@@ -1,0 +1,9 @@
+  1) sratoolkit/3.0.0-6ikpzzj     10) curl/7.85.0-tpp5kb3          19) perl/5.36.0-hhr5weh     28) libffi/3.4.2-ku76ibp          37) libxdmcp/1.1.2-p773mpw    46) util-linux-uuid/2.38.1-jgqx5vj  55) python/3.9.15-zqjl2yq
+  2) openjdk/11.0.17_8-ixtfxgw    11) gzip/1.11-6faiczn            20) libmd/1.0.4-oknbw4j     29) libxcrypt/4.4.33-g6ow6t7      38) xcb-proto/1.14.1-2gzqfum  47) fontconfig/2.13.1-gqd5bcm       56) samtools/1.14-py39-w3z67j4
+  3) bbmap/38.63-syiuv3m          12) libdeflate/1.10-mhsbmtr      21) libbsd/0.11.5-qhwmqgf   30) sqlite/3.40.0-e5he4yf         39) libxcb/1.14-7cqzn4w       48) renderproto/0.11.1-5ydmvy6      57) parallel/20220522-drcqd5u
+  4) bzip2/1.0.8-uyv7sev          13) xz/5.2.7-loepejl             22) expat/2.5.0-4tdiwbg     31) tcl/8.6.12-cdq6yac            40) xextproto/7.3.0-je7vsx3   49) libxrender/0.9.10-uomr6o7       58) star/2.7.6a-wq7xoea
+  5) libiconv/1.16-kmtphon        14) htslib/1.14-rpotpdq          23) libxml2/2.10.3-clr5bwx  32) inputproto/2.3.2-lzccnow      41) xtrans/1.3.5-7x65sip      50) libxft/2.3.2-ty4xhkr            59) stringtie/1.3.4d-py39-q4thkmn
+  6) libunistring/0.9.10-i3rulxj  15) ncurses/6.3-qdx3fhc          24) pigz/2.7-yxzlolc        33) kbproto/1.0.7-byuw3zz         42) libx11/1.7.0-htt7qao      51) libxext/1.3.3-6k4p7cm           60) hisat2/2.2.0-obzi4pp
+  7) libidn2/2.3.0-uiwl7jd        16) berkeley-db/18.1.40-2an3s4b  25) zstd/1.5.2-p2aw74y      34) libpthread-stubs/0.4-beyzztq  43) font-util/1.3.2-qo2cxib   52) scrnsaverproto/1.2.2-phbmzth    61) fastqc/0.11.9-2qkibd3
+  8) zlib/1.2.13-s7s6wri          17) readline/8.2-pbc6xes         26) tar/1.34-shi7ffv        35) xproto/7.0.31-4obciun         44) libpng/1.6.37-egcraan     53) libxscrnsaver/1.2.2-nohwlj7
+  9) openssl/1.1.1s-5273yuq       18) gdbm/1.23-jwsmogv            27) gettext/0.21.1-uyvwtdd  36) libxau/1.0.8-uv24jao          45) freetype/2.11.1-57s7nib   54) tk/8.6.11-kys3a6t
