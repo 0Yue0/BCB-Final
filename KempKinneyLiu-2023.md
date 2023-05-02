@@ -21,11 +21,11 @@ Goal of project: Recreate Additionalfile1:S2; Figure 5A; Figure 3C ?; Figure 3D 
 &nbsp;  
 ***Workflow Details***
 
-slurm script: 
+bash script: LCM_dataset_alignment.sh
 
 Obtain the reference genome and its annotation.
 
-Build an index using the reference genome, and this will be used for the RNA alignment.
+Build an index using the reference genome, which will be used for the RNA alignment.
 
 Obtain the RNA sequence data from the SRA database.
 
@@ -43,7 +43,64 @@ Sort the subsequent BAM files
 
 Obtain the read counts from the alignment BAM files
 
+&nbsp;
 
+bash script: sc_rnaseq_analysis.sh
+
+Obtain the reference genome and its annotation.
+
+Build an index using the reference genome, which will be used for the RNA alignmnet.
+
+Obtain the RNA sequence data from the SRA database.
+  
+  The files will be a compresed version, which must be broken up to obtain paired reads.
+
+Take a FASTQC to check the RNA read data.
+
+Trim the RNA reads.
+
+Take a second FASTQC to check the trimming quality.
+
+Align the RNA reads to the indexed genome.
+
+Sort the subsequent SAM files.
+
+Obtain the read counts from the alignment SAM files.
+
+&nbsp;
+
+UNIX/R script: R_script_to_merge_readcount_files
+
+Create new file with list of file names.
+
+Combine all read count files.
+
+Separate out spike-ins.
+
+
+
+&nbsp;
+
+R script: R_for_Venn.R
+
+Take in merged file of read counts.
+
+Separate out data by cell type.
+
+Count the number of reads per cell type.
+
+Separate out read names.
+
+Combine read names and counted reads per cell type.
+
+Select only reads with counts above 0.
+
+Take read names and compare with other cell types in venn diagrams.
+
+Three diagrams are created: 
+Diploid, 
+Tetraploid,
+Total
 
 
 
