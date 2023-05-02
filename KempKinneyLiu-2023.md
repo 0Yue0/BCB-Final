@@ -21,7 +21,7 @@ Goal of project: Recreate Fig 5 Venn Diagram
 &nbsp;  
 ***Workflow Details***
 
-Note: specific program details are listed within the code
+Note: specific program details are listed within the code or in a separate file in the Code directory
 
 &nbsp;
 
