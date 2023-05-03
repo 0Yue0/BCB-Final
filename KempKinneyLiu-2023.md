@@ -12,7 +12,17 @@ Authors: Qingxin Song, Atsumi Ando, Ning Jiang, Yoko Ikeda, & Z. Jeffrey Chen
 
 *Summary:*
 
-Polyploidy and transcriptome changes
+Basic Premise: Polyploidy and transcriptome changes
+
+Ploidy affects cell size; however, the effects of ploidy on RNA transcripts are not well studied.
+
+This paper uses *Arabidopsis thaliana* to compare RNA transcript level differences between diploid and tetraploid plants in female gametophytic cells.
+
+Methods are explained; however, specific details and code about processing the RNA sequence data is not listed, nor is most of the code for the paper's figures.
+
+The statistical analysis code is given, as well as the normalization and PCA plot code. 
+Specific details about what the code is doing are limited to a broad comment about the function of the entire script.
+
 
 &nbsp;
 
