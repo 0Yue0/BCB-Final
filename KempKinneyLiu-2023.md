@@ -115,7 +115,9 @@ Total
 
 Venn Diagram (Figure 5b)
 
-![Created_Venn_Diagram](#Final_venn_diagram.png)
+![#Final_venn_diagram](#Final_venn_diagram.png)
+
+#Final_venn_diagram
 
 Read count differences; our filtering not as strict as the paper's filtering steps.
 
