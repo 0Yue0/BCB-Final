@@ -117,7 +117,7 @@ Venn Diagram (Figure 5b)
 
 ![#Final_venn_diagram](#Final_venn_diagram.png)
 
-#Final_venn_diagram
+![Venn Diagram](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/main/%23Final_venn_diagram.png)
 
 Read count differences; our filtering not as strict as the paper's filtering steps.
 
