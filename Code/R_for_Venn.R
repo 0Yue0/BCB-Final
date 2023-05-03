@@ -149,7 +149,7 @@ venn.diagram(
 venn.diagram(
   x = list(LRNCC[[1]], LRNEC[[1]], LRNSC[[1]]),
   category.names = c("Central Cell" , "Egg Cell" , "Synergid Cell"),
-  filename = '#Final_venn_diagramm.png',
+  filename = '#Final_venn_diagram.png',
   output=TRUE,
   
   # Output features
