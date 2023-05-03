@@ -33,4 +33,4 @@ colnames(merged_files) <- c("Merge_Col", file_names)
 spikin_values.df <- merged_files[grep("^ERCC*", merged_files$Merge_Col),]
 gene_values.df <- merged_files[grep("^ERCC*", merged_files$Merge_Col, invert=TRUE),]
 
-
+write.table(gene_values.df, file="merged_files.txt", quote=FALSE, sep = "\t", row.names=FALSE, col.names= TRUE)
