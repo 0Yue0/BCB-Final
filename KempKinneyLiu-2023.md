@@ -25,6 +25,7 @@ Note: specific program details are listed within the code or in a separate file 
 
 Note: for rerunning code, make sure code includes references to correct working directories or file locations
 
+
 &nbsp;
 
 bash script: LCM_dataset_alignment.sh
@@ -49,6 +50,7 @@ Sort the subsequent BAM files
 
 Obtain the read counts from the alignment BAM files
 
+
 &nbsp;
 
 bash script: sc_rnaseq_analysis.sh
@@ -72,6 +74,7 @@ Align the RNA reads to the indexed genome.
 Sort the subsequent SAM files.
 
 Obtain the read counts from the alignment SAM files.
+
 
 &nbsp;
 
@@ -106,22 +109,23 @@ Take read names and compare with other cell types in venn diagrams.
 Three diagrams are created: 
 Diploid, 
 Tetraploid,
-Total
+Total Read Count
 
-
+The third is presumed to be a similar diagram to Figure 5b within original paper.
 
 &nbsp;  
 ***Results***
 
-Venn Diagram (Figure 5b)
-
-![#Final_venn_diagram](#Final_venn_diagram.png)
-
-![Venn Diagram](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/main/%23Final_venn_diagram.png)
+Data Processing:
 
 Read count differences; our filtering not as strict as the paper's filtering steps.
 
-Venn diagrams show differences, but overall general trends appear similar.
+&nbsp;
 
+Venn Diagram (Figure 5b):
 
+![Venn Diagram](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/main/%23Final_venn_diagram.png)
 
+Overall, the central cell and egg cell have the most reads in common, followed by all three cell types, the central cell and the synergid cell, and lastly the egg cell and synergid cell have the least reads in common. These match the trends in the original paper's diagram.
+
+Our figure has more unique reads for the egg cell and fewer unique reads for both the central cell and synergid cell than the original paper's diagram.
