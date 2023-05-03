@@ -81,3 +81,10 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
    SupplementaryData/Supplementary_figures.pdf
 
 
+
+
+## Results
+
+### Figure S4 
+![Markdown preferences pane](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/e9fc453e05b08ee72e7e317814dcb60f069f8adb/results/Figure_S4.png)
+
