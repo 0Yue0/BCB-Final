@@ -153,3 +153,4 @@ Heatmap (Figure S4):
 
 Expression levels match overall trends from original paper; however, specific expression levels within egg cell or central cell varies from original paper.
 
+No dosage effects due to ploidy are evident in our figure.
