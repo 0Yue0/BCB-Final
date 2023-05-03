@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+# Process output files from RNA-seq analysis
 ## Run these in the terminal to copy the necessary files and create a file with the list of names
 ```{r}
 git clone https://github.com/0Yue0/BCB546_Spring2023_Final.git
@@ -40,40 +41,11 @@ reduced_files <- lapply(files, function(x) x[,1:2])
 merged_files <- suppressWarnings(Reduce(function(x, y) merge(x, y, by = "V1"), reduced_files)) # merge the files by the first column
 colnames(merged_files) <- c("Merge_Col", file_names)
 
+
 ```
 
 
 
-```{r}
-ref64 <- read_csv("https://github.com/0Yue0/BCB546_Spring2023_Final/blob/2fe63179205b2ec02f1cd8742c074b23eeca1c0f/Data/ref-54-expression.csv")
-```
-
-
-# Figure S4
-```{r}
-# data processing
-
-fs4_gene1 <- c ("AT4G39340","AT5G64720","AT2G21740","AT1G76750","AT2G21750","AT1G74480")
-
-fs4_gene2 <- c("AT1G26795","AT1G60985","AT2G02515","AT2G20595","AT2G35670","AT3G04540",
-               "AT3G10890","AT3G24510","AT4G25530","AT5G04560","AT5G27880","AT5G38330")
-
-fs4_data1 <- merged_files %>% 
-  filter(Merge_Col %in% fs4_gene1) %>%
-  mutate(cell_type = "Egg_cell")
-
-fs4_data2 <- merged_files %>% 
-  filter(Merge_Col %in% fs4_gene2) %>%
-  mutate(cell_type = "Central_cell")
-
-fs4_data <- full_join(fs4_data1,fs4_data2)
-  
-fs4_list <-  c ("AT4G39340","AT5G64720","AT2G21740","AT1G76750","AT2G21750","AT1G74480",
-                "AT1G26795","AT1G60985","AT2G02515","AT2G20595","AT2G35670","AT3G04540",
-               "AT3G10890","AT3G24510","AT4G25530","AT5G04560","AT5G27880","AT5G38330")
-fs4_once <- merged_files %>%
-  filter(Merge_Col %in% fs4_list)
-```
 
 ```{r}
 library(pheatmap)
@@ -91,47 +63,83 @@ library("png")
 library(d3heatmap)
 #install.packages("heatmaply")
 library(heatmaply)
+library(gtable)
+```
+
+
+
+# figure S4 (heatmap)- data processing
+```{r}
+
+fs4_data <- merged_files[,c(1:17, 27:42)]   # select corresponding cell types
+fs4_data <- fs4_data[,c(1,18:33,2:17)]      # reorder the cel tlypes - same with the paper's
+
+# specific gene list
+fs4_list <-  c ("AT4G39340","AT5G64720","AT2G21740","AT1G76750","AT2G21750","AT1G74480",
+                "AT1G26795","AT1G60985","AT2G02515","AT2G20595","AT2G35670","AT3G04540",
+               "AT3G10890","AT3G24510","AT4G25530","AT5G04560","AT5G27880","AT5G38330")
+
+fs4_all <- fs4_data %>% 
+  filter(Merge_Col %in% fs4_list) %>%  # filter based gene ID
+  slice(match(fs4_list, Merge_Col))    # reorder rows with specified order
+
+rownames(fs4_all) <- fs4_all[,1]       # using first column as row names
+  
+fs4_all <- fs4_all %>% dplyr::select(-Merge_Col) # delete first column
+
+fs4_all <- as.matrix(fs4_all)         # covert into matrix for heatmap plotting
 ```
 
 
 
 ```{r}
-class(fs4_data)
-fs4_data_0 <- fs4_data[,1:47]
-
-# Matrix format
-rownames(fs4_data_0) <- fs4_data_0[,1]
-fs4_p <- fs4_data_0%>% dplyr::select(-Merge_Col)
-fs4_p <- as.matrix(fs4_p)
-
-heatmaply(fs4_p,
-          dendrogram = "none",
-          )
-
-pheatmap_fs4 <- fs4_p
-pheatmap_fs4[pheatmap_fs4 == 0] <- NA
-pheatmap(pheatmap_fs4)
-```
+# plotting
 
 
-```{r}
-library(heatmaply)
-p <- heatmaply(fs4_p, 
-        dendrogram = "none",
-        xlab = "", ylab = "", 
-        main = "",
-        scale = "column",
-        margins = c(60,100,40,20),
-        grid_color = "white",
-        grid_width = 0.00001,
-        titleX = FALSE,
-        hide_colorbar = TRUE,
-        branches_lwd = 0.1,
-        label_names = c("Country", "Feature:", "Value"),
-        fontsize_row = 5, fontsize_col = 5,
-        labCol = colnames(mat),
-        labRow = rownames(mat),
-        heatmap_layers = theme(axis.line=element_blank())
+# annotations to rows
+annotation.row = data.frame(
+                    GeneClass = factor(rep(c("Egg cell specific genes", "Central cell specific genes"), c(6,12)))
+                )
+
+rownames(annotation.row) <- rownames(fs4_all)
+
+
+# annotations to columns
+annotation.col = data.frame(
+  CellType = factor(rep(c("ECd", "ECt", "CCd", "CCt"), c(8,8,8,8)))
+)
+
+rownames(annotation.col) = colnames(fs4_all)
+
+
+# plotting
+fs4 <- pheatmap(fs4_all,
+         cluster_rows = F,
+         cluster_cols = F,
+         annotation_row = annotation.row,
+         annotation_col = annotation.col,
+         gaps_row = c(6),
+         gaps_col = rep(c(24,16,8)),
+         show_colnames = F,
+         cellwidth = 10,
+         cellheight = 18,
+         scale = "row"
+         )
+
+# export figures
+pheatmap(fs4_all,
+         cluster_rows = F,
+         cluster_cols = F,
+         annotation_row = annotation.row,
+         annotation_col = annotation.col,
+         gaps_row = c(6),
+         gaps_col = rep(c(24,16,8)),
+         show_colnames = F,
+         cellwidth = 10,
+         cellheight = 18,
+          scale = "row",
+         filename = "Figure_S4.png"
         )
-```
 
+
+```
