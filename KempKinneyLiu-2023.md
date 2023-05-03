@@ -113,6 +113,10 @@ Total
 &nbsp;  
 ***Results***
 
+Venn Diagram (Figure 5b)
+
+![Created_Venn_Diagram](#Final_venn_diagram.png)
+
 Read count differences; our filtering not as strict as the paper's filtering steps.
 
 Venn diagrams show differences, but overall general trends appear similar.
