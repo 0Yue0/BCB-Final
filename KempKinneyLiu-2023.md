@@ -128,7 +128,7 @@ The third is presumed to be a similar diagram to Figure 5b within original paper
 
 Data Processing:
 
-Read count differences; our filtering not as strict as the paper's filtering steps.
+Read count differences; our filtering is not as strict as the paper's filtering steps.
 
 &nbsp;
 
