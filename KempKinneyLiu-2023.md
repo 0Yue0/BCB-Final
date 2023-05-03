@@ -26,7 +26,7 @@ Specific details about what the code is doing are limited to a broad comment abo
 
 &nbsp;
 
-Goal of project: Recreate Fig 5 Venn Diagram
+Goal of project: Recreate Figure 5 Venn Diagram and Figure S4 Heatmap
 
 &nbsp;  
 ***Workflow Details***
@@ -123,6 +123,13 @@ Total Read Count
 
 The third is presumed to be a similar diagram to Figure 5b within original paper.
 
+&nbsp;
+
+R script: Data_visualization_heatmap.Rmd
+
+
+
+
 &nbsp;  
 ***Results***
 
@@ -134,8 +141,15 @@ Read count differences; our filtering is not as strict as the paper's filtering 
 
 Venn Diagram (Figure 5b):
 
-![Venn Diagram](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/main/%23Final_venn_diagram.png)
+![Venn Diagram](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/main/results/%23Final_venn_diagram.png)
 
 Overall, the central cell and egg cell have the most reads in common, followed by all three cell types, the central cell and the synergid cell, and lastly the egg cell and synergid cell have the least reads in common. These match the trends in the original paper's diagram.
 
 Our figure has more unique reads for the egg cell and fewer unique reads for both the central cell and synergid cell than the original paper's diagram.
+
+Heatmap (Figure S4):
+
+![Heatmap](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/main/results/Figure_S4.png)
+
+Expression levels match overall trends from original paper; however, specific expression levels within egg cell or central cell varies from original paper.
+
