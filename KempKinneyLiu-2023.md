@@ -23,6 +23,8 @@ Goal of project: Recreate Fig 5 Venn Diagram
 
 Note: specific program details are listed within the code or in a separate file in the Code directory
 
+Note: for rerunning code, make sure code includes references to correct working directories or file locations
+
 &nbsp;
 
 bash script: LCM_dataset_alignment.sh
