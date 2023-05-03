@@ -86,5 +86,13 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 ## Results
 
 ### Figure S4 
+
+1. Our results
+
 ![Markdown preferences pane](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/e9fc453e05b08ee72e7e317814dcb60f069f8adb/results/Figure_S4.png)
+
+2. From the original paper
+
+![Markdown preferences pane](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/e635e6056850b7302a064d39b5aa9d640188b969/OG_Paper/SupplementaryData/Figure/Figure_S4.png)
+
 
