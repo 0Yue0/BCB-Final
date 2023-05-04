@@ -39,7 +39,7 @@ The following code was run in the order listed.
 
 &nbsp;
 
-bash script: LCM_dataset_alignment.sh
+Bash script: LCM_dataset_alignment.sh
 
 Obtain the reference genome and its annotation.
 
@@ -64,7 +64,7 @@ Obtain the read counts from the alignment BAM files
 
 &nbsp;
 
-bash script: sc_rnaseq_analysis.sh
+Bash script: sc_rnaseq_analysis.sh
 
 Obtain the reference genome and its annotation.
 
@@ -88,7 +88,8 @@ Obtain the read counts from the alignment SAM files.
 
 
 &nbsp;
-bash script: rename_output.bash
+
+Bash script: rename_output.bash
 
 Rename output files from readcounts.
 
