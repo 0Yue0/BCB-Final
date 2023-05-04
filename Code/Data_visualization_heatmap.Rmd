@@ -11,7 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 # Process output files from RNA-seq analysis
-## Run these in the terminal to copy the necessary files and create a file with the list of names
+
+## Run these in the terminal
+##copy the necessary files and create a file with the list of names
 ```{r}
 git clone https://github.com/0Yue0/BCB546_Spring2023_Final.git
 cp ./BCB546_Spring2023_Final/readcounts/* .
@@ -32,6 +34,7 @@ library(readxl)
 ```
 
 
+# Run this in R
 # merge all readcount data into one dataframe
 ```{r}
 list.files <- scan("filenames.txt", what="", sep="\n")
@@ -114,7 +117,7 @@ rownames(annotation.col) = colnames(fs4_all)
 
 # plotting
 fs4 <- pheatmap(fs4_all,
-         cluster_rows = F,
+         cluster_rows = F, 
          cluster_cols = F,
          annotation_row = annotation.row,
          annotation_col = annotation.col,
@@ -143,3 +146,6 @@ pheatmap(fs4_all,
 
 
 ```
+
+
+
