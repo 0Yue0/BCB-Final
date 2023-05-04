@@ -22,8 +22,6 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
    
    Spack_Modules_used
    
-   d3heatmap_0.6.1.2.tar.gz
-   
    rename_output.bash
    
    sc_rnaseq_analysis.sh
