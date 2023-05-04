@@ -47,17 +47,21 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 
    Contains:
    
+   readcounts/
+   
    sc_rna_seq_metadata.txt
    
    LCM_SRA_ACC_list.txt
       
    LCM_SRA-meta.txt
       
-   ref_64_expression_data
+   source_of_LCM_reference64_expression_data
       
    SRR_Acc_list.txt
    
    ref-54-expression.csv
+   
+   SRR_tissue.labels
       
       
 &nbsp;
@@ -79,6 +83,18 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
    SupplementaryData/AF5_primers.xlsx
       
    SupplementaryData/Supplementary_figures.pdf
+   
+   SupplementaryData/Figure/Figure_S4.png
 
+&nbsp;
 
+**Results Directory titled:** results
+
+&nbsp;
+
+   Contains:
+   
+   #Final_venn_diagram.png
+   
+   Figure_S4.png
 
