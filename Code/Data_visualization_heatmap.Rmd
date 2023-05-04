@@ -23,15 +23,26 @@ ls *readcounts.tab > filenames.txt
 
 
 #start of R scripting
-```{r}
-library(tidyverse)
-library(dplyr)
-library(rmarkdown)
-library(stats)
-library(knitr)
-library(readxl)
 
+# load packages
+```{r}
+# Package names
+packages <- c("tidyverse", "dplyr", "rmarkdown", "stats", "knitr", "readxl",
+              "pheatmap")
+
+
+# Install packages not yet installed
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+  install.packages(packages[!installed_packages])
+}
+
+# Packages loading
+invisible(lapply(packages, library, character.only = TRUE))
 ```
+
+
+
 
 
 # Run this in R
@@ -48,26 +59,6 @@ colnames(merged_files) <- c("Merge_Col", file_names)
 ```
 
 
-
-
-```{r}
-library(pheatmap)
-library(tidyverse)
-#install.packages("hrbrthemes")
-library(hrbrthemes)
-library(viridis)
-#install.packages("plotly")
-library(plotly)
-#install.packages("plotl")
-#install.packages("d3heatmap")
-#install.packages("png")
-library("png")
-#install.packages("d3heatmap_0.6.1.2.tar.gz", repso=NULL, type="source")
-library(d3heatmap)
-#install.packages("heatmaply")
-library(heatmaply)
-library(gtable)
-```
 
 
 
