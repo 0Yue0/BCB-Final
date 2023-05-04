@@ -31,7 +31,7 @@ Goal of project: Recreate Figure 5 Venn Diagram and Figure S4 Heatmap
 &nbsp;  
 ***Workflow Details***
 
-Note: specific program details are listed within the code or in a separate file in the Code directory
+Note: specific program details are listed within the code or in a separate file in the Code directory (Spack_Modules_used)
 
 Note: for rerunning code, make sure code includes references to correct working directories or file locations
 
@@ -71,7 +71,7 @@ Build an index using the reference genome, which will be used for the RNA alignm
 
 Obtain the RNA sequence data from the SRA database.
   
-  The files will be a compresed version, which must be broken up to obtain paired reads.
+  The files will be a compresed version, which must be broken up to obtain reads.
 
 Take a FASTQC to check the RNA read data.
 
@@ -84,6 +84,12 @@ Align the RNA reads to the indexed genome.
 Sort the subsequent SAM files.
 
 Obtain the read counts from the alignment SAM files.
+
+
+&nbsp;
+bash script: rename_output.bash
+
+Rename output files from readcounts.
 
 
 &nbsp;
@@ -123,9 +129,33 @@ Total Read Count
 
 The third is presumed to be a similar diagram to Figure 5b within original paper.
 
+
+
+&nbsp;
+
+UNIX code: Download_existing_LCM(ref64)expression_dataset_and_import_to_R
+
+Download and import dataset to R.
+
+
+
 &nbsp;
 
 R script: Data_visualization_heatmap.Rmd
+
+Merge readcount files.
+
+Select cell types for egg cell (diploid), egg cell (tetraploid), central cell (diploid), and central cell (diploid).
+
+Reorder cell types to be grouped together.
+
+Select specific genes, filter on gene ID, reorder rows, remove first column.
+
+Convert data into matrix format.
+
+Make annotations into rows and columns.
+
+Plot data into heatmap, and export heatmap figure into a file.
 
 
 
