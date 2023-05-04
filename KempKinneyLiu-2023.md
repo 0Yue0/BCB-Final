@@ -161,14 +161,14 @@ Plot data into heatmap, and export heatmap figure into a file.
 
 
 
-# Results
+# 1 Results
 
 ## Data Processing:
 
 Read count differences; our filtering is not as strict as the paper's filtering steps.
 
 
-## Venn Diagram (Figure 5b):
+## 2 Venn Diagram (Figure 5b):
 
 ![Venn Diagram](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/main/results/%23Final_venn_diagram.png)
 
@@ -176,7 +176,7 @@ Overall, the central cell and egg cell have the most reads in common, followed b
 
 Our figure has more unique reads for the egg cell and fewer unique reads for both the central cell and synergid cell than the original paper's diagram.
 
-## Heatmap (Figure S4):
+## 3 Heatmap (Figure S4):
 
 ![Heatmap](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/main/results/Figure_S4.png)
 
