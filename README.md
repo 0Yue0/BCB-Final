@@ -6,7 +6,7 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 
 &nbsp;
 
-### **Summary file titled:** KinneyKempLiu-2023.md
+### **Summary file titled:** KempKinneyLiu-2023.md
 &nbsp;
 
    Contains paper summary, coding workflow, results
