@@ -1,16 +1,16 @@
-Group members: Joshua M Kemp, Shelly Kinney, Yue Liu
+### Group members: Joshua M Kemp, Shelly Kinney, Yue Liu
 
 &nbsp;  
 
-***Paper Overview***
+# Paper Overview
 
-Paper: Single-cell RNA-seq analysis reveals ploidy-dependent and cell-specific transcriptome changes in Arabidopsis female gametophytes
+***Paper:*** Single-cell RNA-seq analysis reveals ploidy-dependent and cell-specific transcriptome changes in Arabidopsis female gametophytes
 
-Paper link: https://link.springer.com/article/10.1186/s13059-020-02094-0 
+***Paper link:*** https://link.springer.com/article/10.1186/s13059-020-02094-0 
 
-Authors: Qingxin Song, Atsumi Ando, Ning Jiang, Yoko Ikeda, & Z. Jeffrey Chen
+***Authors:*** Qingxin Song, Atsumi Ando, Ning Jiang, Yoko Ikeda, & Z. Jeffrey Chen
 
-*Summary:*
+***Summary:***
 
 Basic Premise: Polyploidy and transcriptome changes
 
@@ -24,22 +24,25 @@ The statistical analysis code is given, as well as the normalization and PCA plo
 Specific details about what the code is doing are limited to a broad comment about the function of the entire script.
 
 
-&nbsp;
 
-Goal of project: Recreate Figure 5 Venn Diagram and Figure S4 Heatmap
+***Goal of project:*** Recreate Figure 5 Venn Diagram and Figure S4 Heatmap
 
-&nbsp;  
-***Workflow Details***
+ 
+# Workflow Details
 
-Note: specific program details are listed within the code or in a separate file in the Code directory (Spack_Modules_used)
+***Note:*** specific program details are listed within the code or in a separate file in the Code directory (Spack_Modules_used)
 
-Note: for rerunning code, make sure code includes references to correct working directories or file locations
+***Note:*** for rerunning code, make sure code includes references to correct working directories or file locations
 
-The following code was run in the order listed.
 
-&nbsp;
 
-Bash script: LCM_dataset_alignment.sh
+***The following code was run in the order listed.***
+
+
+
+
+
+## 1 Bash script: LCM_dataset_alignment.sh
 
 Obtain the reference genome and its annotation.
 
@@ -62,9 +65,7 @@ Sort the subsequent BAM files
 Obtain the read counts from the alignment BAM files
 
 
-&nbsp;
-
-Bash script: sc_rnaseq_analysis.sh
+## 2 Bash script: sc_rnaseq_analysis.sh
 
 Obtain the reference genome and its annotation.
 
@@ -87,16 +88,15 @@ Sort the subsequent SAM files.
 Obtain the read counts from the alignment SAM files.
 
 
-&nbsp;
 
-Bash script: rename_output.bash
+## 3 Bash script: rename_output.bash
 
 Rename output files from readcounts.
 
 
-&nbsp;
 
-UNIX/R script: R_script_to_merge_readcount_files
+
+## 4 UNIX/R script: R_script_to_merge_readcount_files
 
 Create new file with list of file names.
 
@@ -106,9 +106,8 @@ Separate out spike-ins.
 
 
 
-&nbsp;
 
-R script: R_for_Venn.R
+## 5 R script: R_ for_Venn.R
 
 Take in merged file of read counts.
 
@@ -133,17 +132,17 @@ The third is presumed to be a similar diagram to Figure 5b within original paper
 
 
 
-&nbsp;
 
-UNIX code: Download_existing_LCM(ref64)expression_dataset_and_import_to_R
+
+## 6 UNIX code: Download_existing_LCM(ref64)expression_dataset_and_import_to_R
 
 Download and import dataset to R.
 
 
 
-&nbsp;
 
-R script: Data_visualization_heatmap.Rmd
+
+## 7 R script: Data_visualization_heatmap.Rmd
 
 Merge readcount files.
 
@@ -162,16 +161,14 @@ Plot data into heatmap, and export heatmap figure into a file.
 
 
 
-&nbsp;  
-***Results***
+# Results
 
-Data Processing:
+## Data Processing:
 
 Read count differences; our filtering is not as strict as the paper's filtering steps.
 
-&nbsp;
 
-Venn Diagram (Figure 5b):
+## Venn Diagram (Figure 5b):
 
 ![Venn Diagram](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/main/results/%23Final_venn_diagram.png)
 
@@ -179,10 +176,11 @@ Overall, the central cell and egg cell have the most reads in common, followed b
 
 Our figure has more unique reads for the egg cell and fewer unique reads for both the central cell and synergid cell than the original paper's diagram.
 
-Heatmap (Figure S4):
+## Heatmap (Figure S4):
 
 ![Heatmap](https://github.com/0Yue0/BCB546_Spring2023_Final/blob/main/results/Figure_S4.png)
 
-Expression levels match overall trends from original paper; however, specific expression levels within egg cell or central cell varies from original paper.
+In our analysis, reported cell type specific genes did show the specific expression pattern in certain cell types, which was the same as the original paper. 
 
-No dosage effects due to ploidy are evident in our figure.
+
+No dosage effects due to ploidy are evident in our figure compared to the original paper. 
