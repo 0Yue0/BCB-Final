@@ -161,9 +161,9 @@ Plot data into heatmap, and export heatmap figure into a file.
 
 
 
-# 1 Results
+# Results
 
-## Data Processing:
+## 1 Data Processing:
 
 Read count differences; our filtering is not as strict as the paper's filtering steps.
 
