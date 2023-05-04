@@ -6,14 +6,14 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 
 &nbsp;
 
-**Summary file titled:** KinneyKempLiu-2023.md
+# **Summary file titled:** KinneyKempLiu-2023.md
 &nbsp;
 
    Contains paper summary, coding workflow, results
 
 &nbsp;
 
-**Coding Directory titled:** Code
+# **Coding Directory titled:** Code
 
 &nbsp;
 
@@ -39,7 +39,7 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
       
 &nbsp;
 
-**Data Directory titled:** Data
+# **Data Directory titled:** Data
 
 &nbsp;
 
@@ -64,7 +64,7 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
       
 &nbsp;
 
-**Original Paper Directory titled:** OG_Paper
+# **Original Paper Directory titled:** OG_Paper
 
 &nbsp;
 
@@ -86,7 +86,7 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 
 &nbsp;
 
-**Results Directory titled:** results
+# **Results Directory titled:** results
 
 &nbsp;
 
