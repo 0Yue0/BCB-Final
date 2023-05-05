@@ -44,17 +44,21 @@ Specific details about what the code is doing are limited to a broad comment abo
 
 ## 1 Bash script: LCM_dataset_alignment.sh
 
+This script is largely self contained, and will create then run the necessary Slurm jobs for the complete analysis. There may be some editing required, particularly on the Slurm headers, for this to be run on a particular piece of hardware.  
+Within the script, with the exception of building the index, there are functions defined that will run the following steps in order for each input SRA accension.
+
+
 Obtain the reference genome and its annotation.
 
-Build an index using the reference genome, which will be used for the RNA alignment.
+Build an index using the reference genome, which will be used for the RNA alignment
 
-Obtain the RNA sequence data from the SRA database.
+Obtain the RNA sequence data from the SRA database
 
-  The files will be a compressed version, which must be broken up to obtain paired reads.
+The files will be a compressed version, which must be broken up to obtain paired reads with fasterq-dump.
   
 Take a FASTQC to check RNA read data
 
-Trim the RNA reads
+Trim the RNA reads with bbduk
 
 Take a second FASTQC to check the trimming quality 
 
@@ -62,47 +66,44 @@ Align the RNA reads to the indexed genome
 
 Sort the subsequent BAM files
 
-Obtain the read counts from the alignment BAM files
+Obtain the read counts from the alignment BAM files using stringtie
 
 
 ## 2 Bash script: sc_rnaseq_analysis.sh
 
+This script is adapted from LCM_dataset_alignment.sh and will run in a very similar manner.
+
+
 Obtain the reference genome and its annotation.
 
-Build an index using the reference genome, which will be used for the RNA alignmnet.
+Build an index using the reference genome, reference annotation and ERCC spike-in information.
 
 Obtain the RNA sequence data from the SRA database.
   
-  The files will be a compresed version, which must be broken up to obtain reads.
+The files will be a compresed version, which must be broken up to obtain reads.  Fasterq-dump is used for this.
 
 Take a FASTQC to check the RNA read data.
 
-Trim the RNA reads.
-
-Take a second FASTQC to check the trimming quality.
-
-Align the RNA reads to the indexed genome.
-
-Sort the subsequent SAM files.
-
-Obtain the read counts from the alignment SAM files.
+Use STAR Align the RNA reads to the indexed genome and obtain alignment SAM files and readcount data.
 
 
 
 ## 3 Bash script: rename_output.bash
 
-Rename output files from readcounts.
+Rename STAR output files to list the cell type information.
 
 
 
 
 ## 4 UNIX/R script: R_script_to_merge_readcount_files
 
+Copy out_put files if needed.
+
 Create new file with list of file names.
 
-Combine all read count files.
+Join all read count files into a single R dataframe.
 
-Separate out spike-ins.
+Separate out spike-ins readcount numbers from actual transcript readcounts.
 
 
 
