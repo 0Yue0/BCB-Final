@@ -10,6 +10,10 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
 &nbsp;
 
    Contains paper summary, coding workflow, results
+   
+&nbsp;
+
+Worflow diagram labeled: workflow_diagram.png
 
 &nbsp;
 
