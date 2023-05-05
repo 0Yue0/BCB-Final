@@ -3,10 +3,10 @@
 #  sc_rna_analysis.sh
 #  For BCB 546
 #
-#  Created by Josh Kemp on 4/20/23.
+#
 
 
-acclist=SRR_Acc_list.txt  #list of SRA accesions to download and map
+acclist=SRR_Acc_list.txt  #file with list of SRA accesions to download and map.  txt file downloaded from SRA database.
 
 reference_genome_url="https://ftp.ebi.ac.uk/ensemblgenomes/pub/release-56/plants/fasta/arabidopsis_thaliana/dna/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz"
 reference_annotation_url="https://ftp.ebi.ac.uk/ensemblgenomes/pub/release-56/plants/gtf/arabidopsis_thaliana/Arabidopsis_thaliana.TAIR10.56.gtf.gz"
@@ -22,9 +22,6 @@ cd sc_rnaseq_analysis
 mkdir prefetch_tmp
 mkdir downloaded_reads
 mkdir pretrim_quality
-mkdir filtered_reads
-mkdir trimmed_reads
-mkdir posttrim_quality
 mkdir star_index
 mkdir alignments
 mkdir sorted_alignments
@@ -37,9 +34,9 @@ mkdir star_output
 
 cat << 'EOF' > download_trim_and_map.sh  #this is a readdoc notation.  It prints everything until EOF as written to the "download_trim_and_map.sh file.  In this case I am using it to create a bash script that will take one SRA accession as an input.  $1 references the first input argument in a bash script
 #!/bin/bash
-set -e
+set -e #covered in class; fail fast philosopy applies
 set -u
-set
+
 #variables
 basepath="$(pwd)"  # finds the current directory so that the program can use complete path names to specify files.  file name variables can be updated to use relative paths if needed.
 genome="GCF_*.fna"  #Make sure this matches after indexing
@@ -55,12 +52,12 @@ fasterq-dump -f --threads ${threads} --split-3 --outdir downloaded_reads ${prefe
 fastqc -t ${threads} -o pretrim_quality $fastq & # will show the quality data for the reads pre trimming
 wait
 STAR \
---outFilterMismatchNoverReadLmax .02 \
---genomeDir star_index \
+--outFilterMismatchNoverReadLmax .02 \ #One of the few parameters provided in the paper
+--genomeDir star_index \ #location of the index we built
 --runThreadN ${threads} \
 --readFilesIn $fastq \
---quantMode GeneCounts \
---outFileNamePrefix ${basepath}/star_output/${1}.genecounts \
+--quantMode GeneCounts \ #this option makes sure STAR will output a file with the readcounts, which is what we need for this paper
+--outFileNamePrefix ${basepath}/star_output/${1}.genecounts  # to be honest this the way this is set up has been surprisingly difficult to get Star to put files where I would like.
 
 
 STAR --genomeLoad Remove
@@ -176,10 +173,10 @@ echo "wget ${ERCC_spike_sequences_url}" >> index_genome.batch
 echo "ERCC=ERCC*.zip" >> index_genome.batch
 echo "unzip \$ERCC" >> index_genome.batch
 echo "gzip -d *.gz" >> index_genome.batch
-echo "genome=*_*.*toplevel.fa" >> index_genome.batch
+echo "genome=*_*.*toplevel.fa" >> index_genome.batch #after learning about make files; that would have been a much more stable way to download a reference genome and give it a set name.  This globing bit here could cause issues.
 echo "annotation=*_*.*.gtf" >> index_genome.batch
 echo "ERCC=ERCC*" >> index_genome.batch
-echo "cat \${ERCC}.fa >> \$genome" >> index_genome.batch
+echo "cat \${ERCC}.fa >> \$genome" >> index_genome.batch #these two lines just add the ERCC control sequences into the reference genome and annotation so that the reads will have something to map to.
 echo "cat \${ERCC}.gtf >> \$annotation" >> index_genome.batch
 echo "STAR --runThreadN 24 --runMode genomeGenerate --genomeSAindexNbases 12 --genomeDir star_index --genomeFastaFiles \$genome --sjdbGTFfile \$annotation" >> index_genome.batch
 
