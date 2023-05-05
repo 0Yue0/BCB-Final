@@ -13,7 +13,7 @@ Group Members: Joshua M. Kemp, Shelly Kinney, Yue Liu
    
 &nbsp;
 
-Worflow diagram labeled: workflow_diagram.png
+#### Worflow diagram labeled: workflow_diagram.png
 
 &nbsp;
 
